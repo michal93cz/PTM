@@ -6,6 +6,10 @@
 #include "pdm_filter.h"
 #include "stm32f4_discovery.h"
 #include "stm32f4xx.h"
+//inne
+#include "defines.h"
+#include "stm32f4xx.h"
+#include "tm_stm32f4_pcd8544.h"
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
@@ -36,9 +40,27 @@ static void NVIC_Configure(void);
 static void RCC_Configure(void);
 static void led_init();
 
+void E()
+{
+	PCD8544_DrawLine(5,12,5,24,PCD8544_Pixel_Set); //lewa cala pion
+	PCD8544_DrawLine(6,18,14,18,PCD8544_Pixel_Set); //srodek poziom
+	PCD8544_DrawLine(5,25,15,25,PCD8544_Pixel_Set); //dol poziom
+	PCD8544_DrawLine(5,11,15,11,PCD8544_Pixel_Set); //gora poziom
+}
 /* Functions -----------------------------------------------------------------*/
 int main(void)
 {
+	//180MHz
+		  	SystemInit();
+
+		  	//Initialize LCD with 0x38 software contrast
+		  	PCD8544_Init(0x38);
+
+		  	//Go to x=14, y=3 position
+		  	PCD8544_GotoXY(14, 3);
+
+		  	PCD8544_Puts("E",PCD8544_Pixel_Set, PCD8544_FontSize_5x7);
+
   extern uint32_t Data_Status;
 
   unsigned int freq, i, z;
@@ -46,8 +68,11 @@ int main(void)
 
   RCC_Configure();
   NVIC_Configure();
+
   GPIO_Configure();
+  PCD8544_Refresh();
   I2S_Configure();
+
   led_init();
 
   // Initialize PDM filter
@@ -60,8 +85,8 @@ int main(void)
 
   arm_rfft_init_f32(&S, &S_CFFT, 512, 0, 1);
 
-  while(1){
 
+  while(1){
 
 
 
@@ -77,6 +102,7 @@ int main(void)
 
     I2S_Cmd(SPI2, ENABLE);
 
+    int zamek = 1;
     while(1){
 
 
@@ -118,6 +144,7 @@ int main(void)
     	  GPIO_ResetBits(GPIOD, GPIO_Pin_13);
     	  GPIO_ResetBits(GPIOD, GPIO_Pin_15);
     	  GPIO_SetBits(GPIOD, GPIO_Pin_12);
+    	  E();
       }
       else
       {
@@ -127,6 +154,45 @@ int main(void)
     	  if(czestotliwosc<=327) GPIO_SetBits(GPIOD, GPIO_Pin_15);
     	  if(czestotliwosc>=329) GPIO_SetBits(GPIOD, GPIO_Pin_13);
       }
+      //PCD8544_Refresh();
+
+      switch((int)czestotliwosc)
+          	{
+          		case 328:	// E
+          		{
+          			//PCD8544_Puts("E",PCD8544_Pixel_Set, PCD8544_FontSize_5x7);
+          			//PCD8544_DrawLine(5,12,5,24,PCD8544_Pixel_Set);
+          			//E();
+          			break;
+          		}
+          		case 2: // D
+          		{
+          			break;
+          		}
+          		case 3: // E
+          		{
+          			break;
+          		}
+          		case 4:	// F
+          		{
+          			break;
+          		}
+          		case 5: // G
+          		{
+          			break;
+          		}
+          		case 6: // H
+          		{
+          			break;
+          		}
+          		default:
+          		{
+          			//PCD8544_Puts("brak sygnalu", PCD8544_Pixel_Set, PCD8544_FontSize_5x7);
+          			zamek = 1;
+          			break;
+          		}
+
+          	}
 
       // Wait some time
       //for(i=0; i<0x10000; ++i);
