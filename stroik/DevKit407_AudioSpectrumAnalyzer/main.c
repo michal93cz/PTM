@@ -17,11 +17,11 @@
 uint8_t  PDM_Input_Buffer[PDM_Input_Buffer_SIZE];
 uint16_t PCM_Output_Buffer[PCM_Output_Buffer_SIZE];
 
-float32_t buffer_input[1024];
-float32_t buffer_input_copy[256];
-float32_t buffer_output[1024];
-float32_t buffer_output_mag[1024];
-float32_t buffer_output_mag_copy[256];
+float32_t buffer_input[BUFFER_size];
+float32_t buffer_input_copy[QUATER_Buffer];
+float32_t buffer_output[BUFFER_size];
+float32_t buffer_output_mag[BUFFER_size];
+float32_t buffer_output_mag_copy[QUATER_Buffer];
 float32_t maxvalue;
 float32_t czestotliwosc;
 uint32_t  maxvalueindex;
@@ -83,7 +83,7 @@ int main(void)
   Filter.Out_MicChannels = 1;
   PDM_Filter_Init(&Filter);
 
-  arm_rfft_init_f32(&S, &S_CFFT, 512, 0, 1);
+  arm_rfft_init_f32(&S, &S_CFFT, HALF_Buffer, 0, 1);
 
 
   while(1){
@@ -91,7 +91,7 @@ int main(void)
 
 
     // Clear arrays
-    for(i=0; i<256; ++i){
+    for(i=0; i<QUATER_Buffer; ++i){
       buffer_input_copy[i] = 0;
       buffer_output_mag_copy[i] = 0;
     }
@@ -112,7 +112,7 @@ int main(void)
         }
 
         ++z;
-        if(z > 512/(OUT_FREQ/1000)){
+        if(z > HALF_Buffer/(OUT_FREQ/1000)){
           z = 0;
 
           // ************************************************************
@@ -122,11 +122,11 @@ int main(void)
           // Calculate Real FFT
           arm_rfft_f32(&S, buffer_input, buffer_output);
           // Calculate magnitude
-          arm_cmplx_mag_f32(buffer_output, buffer_output_mag, 512);
+          arm_cmplx_mag_f32(buffer_output, buffer_output_mag, HALF_Buffer);
           // Get maximum value of magnitude
-          arm_max_f32(&(buffer_output_mag[1]), 512, &maxvalue, &maxvalueindex);
+          arm_max_f32(&(buffer_output_mag[1]), HALF_Buffer, &maxvalue, &maxvalueindex);
           // Scale magnitude values
-          for(i=0; i<512; ++i){
+          for(i=0; i<HALF_Buffer; ++i){
             //buffer_output_mag[i] = 100*buffer_output_mag[i]/maxvalue;
             buffer_output_mag[i+1] = 140*buffer_output_mag[i+1]/20000000;
           }
@@ -137,7 +137,7 @@ int main(void)
         Data_Status = 0;
       }
 
-      czestotliwosc=(maxvalueindex+1)*8000/512;
+      czestotliwosc=(maxvalueindex+1)*8000/HALF_Buffer;
 
       if(czestotliwosc>327 && czestotliwosc<329)
       {
