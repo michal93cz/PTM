@@ -137,7 +137,7 @@ int main(void)
         Data_Status = 0;
       }
 
-      czestotliwosc=(maxvalueindex+1)*8000/HALF_Buffer;
+      czestotliwosc=(maxvalueindex+1)*OUT_FREQ/HALF_Buffer;
 
       if(czestotliwosc>327 && czestotliwosc<329)
       {
@@ -153,6 +153,7 @@ int main(void)
     	  GPIO_ResetBits(GPIOD, GPIO_Pin_12);
     	  if(czestotliwosc<=327) GPIO_SetBits(GPIOD, GPIO_Pin_15);
     	  if(czestotliwosc>=329) GPIO_SetBits(GPIOD, GPIO_Pin_13);
+
       }
       //PCD8544_Refresh();
 
