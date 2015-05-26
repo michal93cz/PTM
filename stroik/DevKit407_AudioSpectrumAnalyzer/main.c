@@ -147,6 +147,16 @@ int main(void)
     	  E();
     	  PCD8544_Refresh();
       }
+      else if (czestotliwosc > 325 && czestotliwosc < 331){
+    	  //wieksze
+    	  if(czestotliwosc > 329 && czestotliowsc < 331){
+
+    	  }
+    	  //mniejsze
+    	  else{
+
+    	  }
+      }
       else
       {
     	  GPIO_ResetBits(GPIOD, GPIO_Pin_13);
@@ -207,52 +217,52 @@ int main(void)
 //funkcje do obslugi wyswietlacza
 void reset_lines()
 {
-	PCD8544_DrawLine(6,18,14,18,PCD8544_Pixel_Clear); //srodek poziom
-	PCD8544_DrawLine(5,25,15,25,PCD8544_Pixel_Clear); //dol poziom
-	PCD8544_DrawLine(5,11,15,11,PCD8544_Pixel_Clear); //gora poziom
-	PCD8544_DrawLine(5,12,5,24,PCD8544_Pixel_Clear); //lewa cala pion
-	PCD8544_DrawLine(15,18,15,24,PCD8544_Pixel_Clear); //prawa dol pion
-	PCD8544_DrawLine(15,12,15,24,PCD8544_Pixel_Clear); //prawa cala pion
+	PCD8544_DrawLine(32,18,40,18,PCD8544_Pixel_Clear); //srodek poziom
+	PCD8544_DrawLine(31,25,41,25,PCD8544_Pixel_Clear); //dol poziom
+	PCD8544_DrawLine(31,11,41,11,PCD8544_Pixel_Clear); //gora poziom
+	PCD8544_DrawLine(31,12,31,24,PCD8544_Pixel_Clear); //lewa cala pion
+	PCD8544_DrawLine(41,18,41,24,PCD8544_Pixel_Clear); //prawa dol pion
+	PCD8544_DrawLine(41,12,41,24,PCD8544_Pixel_Clear); //prawa cala pion
 }
 //litery
 void C()
 {
-	PCD8544_DrawLine(5,12,5,24,PCD8544_Pixel_Set); //lewa cala pion
-	PCD8544_DrawLine(5,25,15,25,PCD8544_Pixel_Set); //dol poziom
-	PCD8544_DrawLine(5,11,15,11,PCD8544_Pixel_Set); //gora poziom
+	PCD8544_DrawLine(31,12,31,24,PCD8544_Pixel_Set); //lewa cala pion
+	PCD8544_DrawLine(31,25,41,25,PCD8544_Pixel_Set); //dol poziom
+	PCD8544_DrawLine(31,11,41,11,PCD8544_Pixel_Set); //gora poziom
 }
 void D()
 {
-	PCD8544_DrawLine(15,12,15,24,PCD8544_Pixel_Set); //prawa cala pion
-	PCD8544_DrawLine(5,12,5,24,PCD8544_Pixel_Set); //lewa cala pion
-	PCD8544_DrawLine(5,25,15,25,PCD8544_Pixel_Set); //dol poziom
-	PCD8544_DrawLine(5,11,15,11,PCD8544_Pixel_Set); //gora poziom
+	PCD8544_DrawLine(41,12,41,24,PCD8544_Pixel_Set); //prawa cala pion
+	PCD8544_DrawLine(31,12,31,24,PCD8544_Pixel_Set); //lewa cala pion
+	PCD8544_DrawLine(31,25,41,25,PCD8544_Pixel_Set); //dol poziom
+	PCD8544_DrawLine(31,11,41,11,PCD8544_Pixel_Set); //gora poziom
 }
 void E()
 {
-	PCD8544_DrawLine(5,12,5,24,PCD8544_Pixel_Set); //lewa cala pion
-	PCD8544_DrawLine(6,18,14,18,PCD8544_Pixel_Set); //srodek poziom
-	PCD8544_DrawLine(5,25,15,25,PCD8544_Pixel_Set); //dol poziom
-	PCD8544_DrawLine(5,11,15,11,PCD8544_Pixel_Set); //gora poziom
+	PCD8544_DrawLine(31,12,31,24,PCD8544_Pixel_Set); //lewa cala pion
+	PCD8544_DrawLine(32,18,40,18,PCD8544_Pixel_Set); //srodek poziom
+	PCD8544_DrawLine(31,25,41,25,PCD8544_Pixel_Set); //dol poziom
+	PCD8544_DrawLine(31,11,41,11,PCD8544_Pixel_Set); //gora poziom
 }
 void F()
 {
-	PCD8544_DrawLine(5,12,5,24,PCD8544_Pixel_Set); //lewa cala pion
-	PCD8544_DrawLine(6,18,14,18,PCD8544_Pixel_Set); //srodek poziom
-	PCD8544_DrawLine(5,11,15,11,PCD8544_Pixel_Set); //gora poziom
+	PCD8544_DrawLine(31,12,31,24,PCD8544_Pixel_Set); //lewa cala pion
+	PCD8544_DrawLine(32,18,40,18,PCD8544_Pixel_Set); //srodek poziom
+	PCD8544_DrawLine(31,11,15,11,PCD8544_Pixel_Set); //gora poziom
 }
 void G()
 {
-	PCD8544_DrawLine(5,12,5,24,PCD8544_Pixel_Set); //lewa cala pion
-	PCD8544_DrawLine(15,18,15,24,PCD8544_Pixel_Set); //prawa dol pion
-	PCD8544_DrawLine(5,25,15,25,PCD8544_Pixel_Set); //dol poziom
-	PCD8544_DrawLine(5,11,15,11,PCD8544_Pixel_Set); //gora poziom
+	PCD8544_DrawLine(31,12,31,24,PCD8544_Pixel_Set); //lewa cala pion
+	PCD8544_DrawLine(41,18,41,24,PCD8544_Pixel_Set); //prawa dol pion
+	PCD8544_DrawLine(31,25,41,25,PCD8544_Pixel_Set); //dol poziom
+	PCD8544_DrawLine(31,11,41,11,PCD8544_Pixel_Set); //gora poziom
 }
 void H()
 {
-	PCD8544_DrawLine(5,12,5,24,PCD8544_Pixel_Set); //lewa cala pion
-	PCD8544_DrawLine(15,12,15,24,PCD8544_Pixel_Set); //prawa cala pion
-	PCD8544_DrawLine(6,18,14,18,PCD8544_Pixel_Set); //srodek poziom
+	PCD8544_DrawLine(31,12,41,24,PCD8544_Pixel_Set); //lewa cala pion
+	PCD8544_DrawLine(41,12,41,24,PCD8544_Pixel_Set); //prawa cala pion
+	PCD8544_DrawLine(32,18,40,18,PCD8544_Pixel_Set); //srodek poziom
 }
 
 
