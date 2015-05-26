@@ -40,13 +40,13 @@ static void NVIC_Configure(void);
 static void RCC_Configure(void);
 static void led_init();
 
-void E()
-{
-	PCD8544_DrawLine(5,12,5,24,PCD8544_Pixel_Set); //lewa cala pion
-	PCD8544_DrawLine(6,18,14,18,PCD8544_Pixel_Set); //srodek poziom
-	PCD8544_DrawLine(5,25,15,25,PCD8544_Pixel_Set); //dol poziom
-	PCD8544_DrawLine(5,11,15,11,PCD8544_Pixel_Set); //gora poziom
-}
+void E();
+void C();
+void D();
+void F();
+void G();
+void H();
+void reset_lines();
 /* Functions -----------------------------------------------------------------*/
 int main(void)
 {
@@ -59,7 +59,7 @@ int main(void)
 		  	//Go to x=14, y=3 position
 		  	PCD8544_GotoXY(14, 3);
 
-		  	PCD8544_Puts("E",PCD8544_Pixel_Set, PCD8544_FontSize_5x7);
+		  	//PCD8544_Puts("E",PCD8544_Pixel_Set, PCD8544_FontSize_5x7);
 
   extern uint32_t Data_Status;
 
@@ -145,6 +145,7 @@ int main(void)
     	  GPIO_ResetBits(GPIOD, GPIO_Pin_15);
     	  GPIO_SetBits(GPIOD, GPIO_Pin_12);
     	  E();
+    	  PCD8544_Refresh();
       }
       else
       {
@@ -153,7 +154,8 @@ int main(void)
     	  GPIO_ResetBits(GPIOD, GPIO_Pin_12);
     	  if(czestotliwosc<=327) GPIO_SetBits(GPIOD, GPIO_Pin_15);
     	  if(czestotliwosc>=329) GPIO_SetBits(GPIOD, GPIO_Pin_13);
-
+    	  reset_lines();
+    	  PCD8544_Refresh();
       }
       //PCD8544_Refresh();
 
@@ -202,7 +204,56 @@ int main(void)
     I2S_Cmd(SPI2, DISABLE);
   }
 }
-
+//funkcje do obslugi wyswietlacza
+void reset_lines()
+{
+	PCD8544_DrawLine(6,18,14,18,PCD8544_Pixel_Clear); //srodek poziom
+	PCD8544_DrawLine(5,25,15,25,PCD8544_Pixel_Clear); //dol poziom
+	PCD8544_DrawLine(5,11,15,11,PCD8544_Pixel_Clear); //gora poziom
+	PCD8544_DrawLine(5,12,5,24,PCD8544_Pixel_Clear); //lewa cala pion
+	PCD8544_DrawLine(15,18,15,24,PCD8544_Pixel_Clear); //prawa dol pion
+	PCD8544_DrawLine(15,12,15,24,PCD8544_Pixel_Clear); //prawa cala pion
+}
+//litery
+void C()
+{
+	PCD8544_DrawLine(5,12,5,24,PCD8544_Pixel_Set); //lewa cala pion
+	PCD8544_DrawLine(5,25,15,25,PCD8544_Pixel_Set); //dol poziom
+	PCD8544_DrawLine(5,11,15,11,PCD8544_Pixel_Set); //gora poziom
+}
+void D()
+{
+	PCD8544_DrawLine(15,12,15,24,PCD8544_Pixel_Set); //prawa cala pion
+	PCD8544_DrawLine(5,12,5,24,PCD8544_Pixel_Set); //lewa cala pion
+	PCD8544_DrawLine(5,25,15,25,PCD8544_Pixel_Set); //dol poziom
+	PCD8544_DrawLine(5,11,15,11,PCD8544_Pixel_Set); //gora poziom
+}
+void E()
+{
+	PCD8544_DrawLine(5,12,5,24,PCD8544_Pixel_Set); //lewa cala pion
+	PCD8544_DrawLine(6,18,14,18,PCD8544_Pixel_Set); //srodek poziom
+	PCD8544_DrawLine(5,25,15,25,PCD8544_Pixel_Set); //dol poziom
+	PCD8544_DrawLine(5,11,15,11,PCD8544_Pixel_Set); //gora poziom
+}
+void F()
+{
+	PCD8544_DrawLine(5,12,5,24,PCD8544_Pixel_Set); //lewa cala pion
+	PCD8544_DrawLine(6,18,14,18,PCD8544_Pixel_Set); //srodek poziom
+	PCD8544_DrawLine(5,11,15,11,PCD8544_Pixel_Set); //gora poziom
+}
+void G()
+{
+	PCD8544_DrawLine(5,12,5,24,PCD8544_Pixel_Set); //lewa cala pion
+	PCD8544_DrawLine(15,18,15,24,PCD8544_Pixel_Set); //prawa dol pion
+	PCD8544_DrawLine(5,25,15,25,PCD8544_Pixel_Set); //dol poziom
+	PCD8544_DrawLine(5,11,15,11,PCD8544_Pixel_Set); //gora poziom
+}
+void H()
+{
+	PCD8544_DrawLine(5,12,5,24,PCD8544_Pixel_Set); //lewa cala pion
+	PCD8544_DrawLine(15,12,15,24,PCD8544_Pixel_Set); //prawa cala pion
+	PCD8544_DrawLine(6,18,14,18,PCD8544_Pixel_Set); //srodek poziom
+}
 
 
 /* Private functions ---------------------------------------------------------*/
