@@ -78,7 +78,7 @@ int main(void)
   // Initialize PDM filter
   Filter.Fs = OUT_FREQ;
   Filter.HP_HZ = 10;
-  Filter.LP_HZ = 16000;
+  Filter.LP_HZ = 1000;
   Filter.In_MicChannels = 1;
   Filter.Out_MicChannels = 1;
   PDM_Filter_Init(&Filter);
@@ -137,9 +137,9 @@ int main(void)
         Data_Status = 0;
       }
 
-      czestotliwosc=(maxvalueindex+1)*OUT_FREQ/HALF_Buffer;
+      czestotliwosc = (maxvalueindex+1)*OUT_FREQ/HALF_Buffer;
 
-      if(czestotliwosc>327 && czestotliwosc<329)
+      if(czestotliwosc==328)
       {
     	  GPIO_ResetBits(GPIOD, GPIO_Pin_13);
     	  GPIO_ResetBits(GPIOD, GPIO_Pin_15);
@@ -147,16 +147,16 @@ int main(void)
     	  E();
     	  PCD8544_Refresh();
       }
-      else if (czestotliwosc > 325 && czestotliwosc < 331){
+     /* else if (czestotliwosc > 325 && czestotliwosc < 331){
     	  //wieksze
-    	  if(czestotliwosc > 329 && czestotliowsc < 331){
+    	  if(czestotliwosc > 329 && czestotliwosc < 331){
 
     	  }
     	  //mniejsze
     	  else{
 
     	  }
-      }
+      } */
       else
       {
     	  GPIO_ResetBits(GPIOD, GPIO_Pin_13);
