@@ -46,6 +46,10 @@ void D();
 void F();
 void G();
 void H();
+void bemol();
+void reset_bemol();
+void krzyzyk();
+void reset_krzyzyk();
 void reset_lines();
 /* Functions -----------------------------------------------------------------*/
 int main(void)
@@ -162,8 +166,21 @@ int main(void)
     	  GPIO_ResetBits(GPIOD, GPIO_Pin_13);
     	  GPIO_ResetBits(GPIOD, GPIO_Pin_15);
     	  GPIO_ResetBits(GPIOD, GPIO_Pin_12);
-    	  if(czestotliwosc<=327) GPIO_SetBits(GPIOD, GPIO_Pin_15);
-    	  if(czestotliwosc>=329) GPIO_SetBits(GPIOD, GPIO_Pin_13);
+    	  if(czestotliwosc<=327)
+    		  {
+    		  	  reset_krzyzyk();
+    		  	  bemol();
+    		  	  E();
+    		  	  PCD8544_Refresh();
+    		  	  GPIO_SetBits(GPIOD, GPIO_Pin_15);
+    		  }
+    	  if(czestotliwosc>=329)
+    		  {
+    		  	  reset_bemol();
+    		  	  krzyzyk();
+    		  	  PCD8544_Refresh();
+    		  	  GPIO_SetBits(GPIOD, GPIO_Pin_13);
+    		  }
     	  reset_lines();
     	  PCD8544_Refresh();
       }
@@ -223,6 +240,33 @@ void reset_lines()
 	PCD8544_DrawLine(31,12,31,24,PCD8544_Pixel_Clear); //lewa cala pion
 	PCD8544_DrawLine(41,18,41,24,PCD8544_Pixel_Clear); //prawa dol pion
 	PCD8544_DrawLine(41,12,41,24,PCD8544_Pixel_Clear); //prawa cala pion
+}
+//znaki
+void reset_krzyzyk()
+{
+	//ustawienie krzyzyka
+	PCD8544_DrawLine(58,14,68,14,PCD8544_Pixel_Clear); //poziom dol
+	PCD8544_DrawLine(58,20,68,20,PCD8544_Pixel_Clear); //poziom gora
+	PCD8544_DrawLine(66,12,66,22,PCD8544_Pixel_Clear); //pion prawa
+	PCD8544_DrawLine(60,12,60,22,PCD8544_Pixel_Clear); //pion lewa
+}
+void krzyzyk() //krzyzyk - podwyzszony
+{
+	//ustawienie krzyzyka
+	PCD8544_DrawLine(58,14,68,14,PCD8544_Pixel_Set); //poziom dol
+	PCD8544_DrawLine(58,20,68,20,PCD8544_Pixel_Set); //poziom gora
+	PCD8544_DrawLine(66,12,66,22,PCD8544_Pixel_Set); //pion prawa
+	PCD8544_DrawLine(60,12,60,22,PCD8544_Pixel_Set); //pion lewa
+}
+void bemol() //bemol - obnizony
+{
+	PCD8544_DrawFilledCircle(10, 20, 3, PCD8544_Pixel_Set); //ko³o
+	PCD8544_DrawLine(14,20,14,12, PCD8544_Pixel_Set);//kreska
+}
+void reset_bemol()
+{
+	PCD8544_DrawFilledCircle(10, 20, 3, PCD8544_Pixel_Clear); //ko³o
+	PCD8544_DrawLine(14,20,14,12, PCD8544_Pixel_Clear);//kreska
 }
 //litery
 void C()
