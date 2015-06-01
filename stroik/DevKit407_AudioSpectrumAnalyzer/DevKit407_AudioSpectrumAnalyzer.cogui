@@ -17,9 +17,9 @@
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/Users/mICHU/Documents/GitHub/PTM/stroik/DevKit407_AudioSpectrumAnalyzer/main.c" title="main.c" tooltip="C:/Users/mICHU/Documents/GitHub/PTM/stroik/DevKit407_AudioSpectrumAnalyzer/main.c" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/Users/Bartosz/Documents/GitHub/PTM/stroik/DevKit407_AudioSpectrumAnalyzer/main.c" title="main.c" tooltip="C:/Users/Bartosz/Documents/GitHub/PTM/stroik/DevKit407_AudioSpectrumAnalyzer/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/DevKit407_AudioSpectrumAnalyzer/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="10216" selectionTopPixel="2755"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="10216" selectionTopPixel="2288"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.h" partName="main.h" path="C:/Users/mICHU/Documents/GitHub/PTM/stroik/DevKit407_AudioSpectrumAnalyzer/main.h" title="main.h" tooltip="C:/Users/mICHU/Documents/GitHub/PTM/stroik/DevKit407_AudioSpectrumAnalyzer/main.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/DevKit407_AudioSpectrumAnalyzer/main.h"/>
@@ -60,8 +60,7 @@
 </view>
 <view id="org.coocox.coassistant.view.CoAssistantView_debug" partName="Peripherals">
 <viewState horizontalPosition="0" verticalPosition="0">
-<selection>
-<element name="I2S2ext"/>
+<selection>&#x0A;<element name="I2S2ext"/>
 </selection>
 <registerValues baseAddress="Base Address: 0x40003400" description="Description:  "/>
 </viewState>
@@ -205,36 +204,24 @@
 <view id="org.eclipse.debug.ui.VariableView"/>
 <fastViewBars/>
 <viewLayoutRec closeable="false" id="org.eclipse.debug.ui.DebugView"/>
-<layout>
-<mainWindow>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@79b461">
-<folder activePageID="org.coocox.component.ui.ComponentView" appearance="2" expanded="2">
-<page content="org.coocox.component.ui.ComponentView" label="Components"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.ui.internal.ViewStack@79b461">&#x0A;<folder activePageID="org.coocox.component.ui.ComponentView" appearance="2" expanded="2">&#x0A;<page content="org.coocox.component.ui.ComponentView" label="Components"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.74977976" ratioLeft="851" ratioRight="284" relationship="2" relative="org.eclipse.ui.internal.ViewStack@79b461">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.74977976" ratioLeft="851" ratioRight="284" relationship="2" relative="org.eclipse.ui.internal.ViewStack@79b461">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@6a5680" ratio="0.57613814" ratioLeft="367" ratioRight="270" relationship="4" relative="org.eclipse.ui.internal.ViewStack@79b461">
-<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
-<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@6a5680" ratio="0.57613814" ratioLeft="367" ratioRight="270" relationship="4" relative="org.eclipse.ui.internal.ViewStack@79b461">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@f93c4c" ratio="0.49955946" ratioLeft="567" ratioRight="568" relationship="2" relative="org.eclipse.ui.internal.ViewStack@6a5680">
-<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">
-<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@f93c4c" ratio="0.49955946" ratioLeft="567" ratioRight="568" relationship="2" relative="org.eclipse.ui.internal.ViewStack@6a5680">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.MemoryView" label="LabelNotFound"/>
 <page content="org.coocox.codebugger.trace.ui.traceview" label="LabelNotFound"/>
@@ -243,30 +230,23 @@
 <page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@e5b27d" ratio="0.87031084" ratioLeft="812" ratioRight="121" relationship="2" relative="org.eclipse.ui.internal.ViewStack@79b461">
-<folder activePageID="org.coocox.coassistant.view.CoAssistantView_debug" appearance="2" expanded="2">
-<page content="org.coocox.coassistant.view.CoAssistantView_debug" label="Peripherals"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@e5b27d" ratio="0.87031084" ratioLeft="812" ratioRight="121" relationship="2" relative="org.eclipse.ui.internal.ViewStack@79b461">&#x0A;<folder activePageID="org.coocox.coassistant.view.CoAssistantView_debug" appearance="2" expanded="2">&#x0A;<page content="org.coocox.coassistant.view.CoAssistantView_debug" label="Peripherals"/>
 <page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.debug.ui.RegisterView" label="Registers"/>
 <page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 </presentation>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.29964748" ratioLeft="255" ratioRight="596" relationship="2" relative="org.eclipse.ui.internal.ViewStack@79b461"/>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@2952f5" ratio="0.5" ratioLeft="381" ratioRight="381" relationship="4" relative="org.eclipse.ui.internal.ViewStack@79b461">
-<folder activePageID="org.coocox.builder.ui.views.ProjectView" appearance="2" expanded="2">
-<page content="org.coocox.builder.ui.views.ProjectView" label="Project"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@2952f5" ratio="0.5" ratioLeft="381" ratioRight="381" relationship="4" relative="org.eclipse.ui.internal.ViewStack@79b461">&#x0A;<folder activePageID="org.coocox.builder.ui.views.ProjectView" appearance="2" expanded="2">&#x0A;<page content="org.coocox.builder.ui.views.ProjectView" label="Project"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
@@ -451,44 +431,47 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32f4_pcd8544.c" tooltip="DevKit407_AudioSpectrumAnalyzer/cmsis_lib/source/tm_stm32f4_pcd8544.c">
-<persistable path="/DevKit407_AudioSpectrumAnalyzer/cmsis_lib/source/tm_stm32f4_pcd8544.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_spi.c" tooltip="DevKit407_AudioSpectrumAnalyzer/cmsis_lib/source/stm32f4xx_spi.c">
-<persistable path="/DevKit407_AudioSpectrumAnalyzer/cmsis_lib/source/stm32f4xx_spi.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32f4_spi.c" tooltip="DevKit407_AudioSpectrumAnalyzer/cmsis_lib/source/tm_stm32f4_spi.c">
-<persistable path="/DevKit407_AudioSpectrumAnalyzer/cmsis_lib/source/tm_stm32f4_spi.c"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.h" tooltip="DevKit407_AudioSpectrumAnalyzer/main.h">
 <persistable path="/DevKit407_AudioSpectrumAnalyzer/main.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="DevKit407_AudioSpectrumAnalyzer/main.c">
-<persistable path="/DevKit407_AudioSpectrumAnalyzer/main.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_it.c" tooltip="DevKit407_AudioSpectrumAnalyzer/stm32f4xx_it.c">
-<persistable path="/DevKit407_AudioSpectrumAnalyzer/stm32f4xx_it.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32f4_pcd8544.h" tooltip="DevKit407_AudioSpectrumAnalyzer/cmsis_lib/include/tm_stm32f4_pcd8544.h">
+<persistable path="/DevKit407_AudioSpectrumAnalyzer/cmsis_lib/include/tm_stm32f4_pcd8544.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_spi.h" tooltip="DevKit407_AudioSpectrumAnalyzer/cmsis_lib/include/stm32f4xx_spi.h">
 <persistable path="/DevKit407_AudioSpectrumAnalyzer/cmsis_lib/include/stm32f4xx_spi.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_it.h" tooltip="DevKit407_AudioSpectrumAnalyzer/stm32f4xx_it.h">
-<persistable path="/DevKit407_AudioSpectrumAnalyzer/stm32f4xx_it.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32f4_spi.h" tooltip="DevKit407_AudioSpectrumAnalyzer/cmsis_lib/include/tm_stm32f4_spi.h">
+<persistable path="/DevKit407_AudioSpectrumAnalyzer/cmsis_lib/include/tm_stm32f4_spi.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32f4_gpio.h" tooltip="DevKit407_AudioSpectrumAnalyzer/cmsis_lib/include/tm_stm32f4_gpio.h">
+<persistable path="/DevKit407_AudioSpectrumAnalyzer/cmsis_lib/include/tm_stm32f4_gpio.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32f4_spi.c" tooltip="DevKit407_AudioSpectrumAnalyzer/cmsis_lib/source/tm_stm32f4_spi.c">
+<persistable path="/DevKit407_AudioSpectrumAnalyzer/cmsis_lib/source/tm_stm32f4_spi.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="defines.h" tooltip="DevKit407_AudioSpectrumAnalyzer/cmsis_lib/include/defines.h">
+<persistable path="/DevKit407_AudioSpectrumAnalyzer/cmsis_lib/include/defines.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="misc.h" tooltip="DevKit407_AudioSpectrumAnalyzer/cmsis_lib/include/misc.h">
+<persistable path="/DevKit407_AudioSpectrumAnalyzer/cmsis_lib/include/misc.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="attributes.h" tooltip="DevKit407_AudioSpectrumAnalyzer/cmsis_lib/include/attributes.h">
+<persistable path="/DevKit407_AudioSpectrumAnalyzer/cmsis_lib/include/attributes.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_gpio.h" tooltip="DevKit407_AudioSpectrumAnalyzer/cmsis_lib/include/stm32f4xx_gpio.h">
+<persistable path="/DevKit407_AudioSpectrumAnalyzer/cmsis_lib/include/stm32f4xx_gpio.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32f4_pcd8544.c" tooltip="DevKit407_AudioSpectrumAnalyzer/cmsis_lib/source/tm_stm32f4_pcd8544.c">
+<persistable path="/DevKit407_AudioSpectrumAnalyzer/cmsis_lib/source/tm_stm32f4_pcd8544.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_gpio.c" tooltip="DevKit407_AudioSpectrumAnalyzer/cmsis_lib/source/stm32f4xx_gpio.c">
+<persistable path="/DevKit407_AudioSpectrumAnalyzer/cmsis_lib/source/stm32f4xx_gpio.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="pdm_filter.h" tooltip="DevKit407_AudioSpectrumAnalyzer/pdm_filter.h">
 <persistable path="/DevKit407_AudioSpectrumAnalyzer/pdm_filter.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4_discovery.h" tooltip="Stroik/cmsis_lib/include/stm32f4_discovery.h">
-<persistable path="/Stroik/cmsis_lib/include/stm32f4_discovery.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="arm_cfft_radix4_init_f32.c" tooltip="Stroik/DSP/arm_cfft_radix4_init_f32.c">
-<persistable path="/Stroik/DSP/arm_cfft_radix4_init_f32.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="arm_common_tables.c" tooltip="Stroik/DSP/arm_common_tables.c">
-<persistable path="/Stroik/DSP/arm_common_tables.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="arm_math.h" tooltip="Stroik/cmsis/arm_math.h">
-<persistable path="/Stroik/cmsis/arm_math.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4_discovery_lcd.c" tooltip="DevKit407_AudioSpectrumAnalyzer/DevKit407/stm32f4_discovery_lcd.c">
+<persistable path="/DevKit407_AudioSpectrumAnalyzer/DevKit407/stm32f4_discovery_lcd.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_it.c" tooltip="Stroik/stm32f4xx_it.c">
 <persistable path="/Stroik/stm32f4xx_it.c"/>
