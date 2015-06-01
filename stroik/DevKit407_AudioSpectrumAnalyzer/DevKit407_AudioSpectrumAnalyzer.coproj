@@ -90,27 +90,27 @@
     <File name="cmsis_lib/source/stm32f4xx_gpio.c" path="cmsis_lib/source/stm32f4xx_gpio.c" type="1"/>
     <File name="cmsis_lib/source/tm_stm32f4_pcd8544.c" path="cmsis_lib/source/tm_stm32f4_pcd8544.c" type="1"/>
     <File name="cmsis_boot" path="" type="2"/>
+    <File name="DevKit407" path="" type="2"/>
     <File name="DSP/arm_rfft_f32.c" path="DSP/TransformFunctions/arm_rfft_f32.c" type="1"/>
     <File name="cmsis_lib/include/stm32f4xx_syscfg.h" path="cmsis_lib/include/stm32f4xx_syscfg.h" type="1"/>
-    <File name="DevKit407" path="" type="2"/>
     <File name="cmsis_lib/source/stm32f4xx_fsmc.c" path="cmsis_lib/source/stm32f4xx_fsmc.c" type="1"/>
     <File name="cmsis_lib/include/stm32f4xx_crc.h" path="cmsis_lib/include/stm32f4xx_crc.h" type="1"/>
     <File name="DSP/arm_max_f32.c" path="DSP/StatisticsFunctions/arm_max_f32.c" type="1"/>
     <File name="cmsis_lib/include/defines.h" path="cmsis_lib/include/defines.h" type="1"/>
-    <File name="DevKit407/fonts.c" path="DevKit407/fonts.c" type="1"/>
-    <File name="cmsis_boot/startup" path="" type="2"/>
     <File name="cmsis/core_cm4_simd.h" path="cmsis/core_cm4_simd.h" type="1"/>
     <File name="cmsis_boot/stm32f4xx.h" path="cmsis_boot/stm32f4xx.h" type="1"/>
+    <File name="DevKit407/fonts.c" path="DevKit407/fonts.c" type="1"/>
+    <File name="cmsis_boot/startup" path="" type="2"/>
     <File name="cmsis_lib/source/stm32f4xx_spi.c" path="cmsis_lib/source/stm32f4xx_spi.c" type="1"/>
     <File name="cmsis/core_cmFunc.h" path="cmsis/core_cmFunc.h" type="1"/>
+    <File name="cmsis_lib/include/tm_stm32f4_pcd8544.h" path="cmsis_lib/include/tm_stm32f4_pcd8544.h" type="1"/>
     <File name="cmsis/core_cm4.h" path="cmsis/core_cm4.h" type="1"/>
     <File name="cmsis/arm_common_tables.h" path="cmsis/arm_common_tables.h" type="1"/>
-    <File name="cmsis_lib/include/tm_stm32f4_pcd8544.h" path="cmsis_lib/include/tm_stm32f4_pcd8544.h" type="1"/>
     <File name="cmsis_lib/source/stm32f4xx_crc.c" path="cmsis_lib/source/stm32f4xx_crc.c" type="1"/>
-    <File name="cmsis/arm_math.h" path="cmsis/arm_math.h" type="1"/>
     <File name="main.h" path="main.h" type="1"/>
-    <File name="stm32f4xx_it.c" path="stm32f4xx_it.c" type="1"/>
+    <File name="cmsis/arm_math.h" path="cmsis/arm_math.h" type="1"/>
     <File name="cmsis_lib/source/misc.c" path="cmsis_lib/source/misc.c" type="1"/>
+    <File name="stm32f4xx_it.c" path="stm32f4xx_it.c" type="1"/>
     <File name="syscalls/syscalls.c" path="syscalls/syscalls.c" type="1"/>
     <File name="cmsis_lib/source" path="" type="2"/>
     <File name="cmsis_boot/stm32f4xx_conf.h" path="cmsis_boot/stm32f4xx_conf.h" type="1"/>
@@ -128,8 +128,8 @@
     <File name="DevKit407/stm32f4_discovery_lcd.h" path="DevKit407/stm32f4_discovery_lcd.h" type="1"/>
     <File name="DevKit407/stm32f4_discovery.c" path="DevKit407/stm32f4_discovery.c" type="1"/>
     <File name="DSP/arm_cfft_radix4_init_f32.c" path="DSP/TransformFunctions/arm_cfft_radix4_init_f32.c" type="1"/>
-    <File name="cmsis_lib/source/stm32f4xx_exti.c" path="cmsis_lib/source/stm32f4xx_exti.c" type="1"/>
     <File name="cmsis_lib/include/stm32f4xx_exti.h" path="cmsis_lib/include/stm32f4xx_exti.h" type="1"/>
+    <File name="cmsis_lib/source/stm32f4xx_exti.c" path="cmsis_lib/source/stm32f4xx_exti.c" type="1"/>
     <File name="cmsis_lib/include/tm_stm32f4_spi.h" path="cmsis_lib/include/tm_stm32f4_spi.h" type="1"/>
     <File name="cmsis_boot/system_stm32f4xx.c" path="cmsis_boot/system_stm32f4xx.c" type="1"/>
     <File name="cmsis_lib/source/tm_stm32f4_gpio.c" path="cmsis_lib/source/tm_stm32f4_gpio.c" type="1"/>
@@ -147,8 +147,8 @@
     <File name="cmsis_lib/include/stm32f4xx_fsmc.h" path="cmsis_lib/include/stm32f4xx_fsmc.h" type="1"/>
     <File name="DSP" path="" type="2"/>
     <File name="cmsis_lib/include" path="" type="2"/>
-    <File name="DevKit407/fonts.h" path="DevKit407/fonts.h" type="1"/>
     <File name="DevKit407/stm32f4_discovery.h" path="DevKit407/stm32f4_discovery.h" type="1"/>
+    <File name="DevKit407/fonts.h" path="DevKit407/fonts.h" type="1"/>
     <File name="main.c" path="main.c" type="1"/>
   </Files>
 </Project>

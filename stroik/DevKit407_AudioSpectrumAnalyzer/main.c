@@ -164,8 +164,16 @@ int main(void)
           			    	  GPIO_ResetBits(GPIOD, GPIO_Pin_13);
           			    	  GPIO_ResetBits(GPIOD, GPIO_Pin_15);
           			    	  GPIO_ResetBits(GPIOD, GPIO_Pin_12);
-          			    	  if(czestotliwosc<=327) bemol();//GPIO_SetBits(GPIOD, GPIO_Pin_15);
-          			    	  if(czestotliwosc>=329) krzyzyk();//GPIO_SetBits(GPIOD, GPIO_Pin_13);
+          			    	  if(czestotliwosc<=327)
+          			    	  {
+          			    		  bemol();
+          			    		  GPIO_SetBits(GPIOD, GPIO_Pin_15);
+          			    	  }
+          			    	  if(czestotliwosc>=329)
+          			    	  {
+          			    		  krzyzyk();
+          			    		  GPIO_SetBits(GPIOD, GPIO_Pin_13);
+          			    	  }
           			      }
           			PCD8544_Refresh();
           			reset_bemol();
