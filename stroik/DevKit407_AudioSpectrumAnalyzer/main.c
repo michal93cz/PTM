@@ -144,47 +144,30 @@ int main(void)
 
       czestotliwosc=(maxvalueindex+1)*OUT_FREQ/HALF_Buffer;
 
-      if(czestotliwosc == 328) //zakres 3 hz
-      {
-    	  GPIO_ResetBits(GPIOD, GPIO_Pin_13);
-    	  GPIO_ResetBits(GPIOD, GPIO_Pin_15);
-    	  GPIO_SetBits(GPIOD, GPIO_Pin_12);
-    	  E();
-    	  PCD8544_Refresh();
-      }
-      else
-      {
-    	  GPIO_ResetBits(GPIOD, GPIO_Pin_13);
-    	  GPIO_ResetBits(GPIOD, GPIO_Pin_15);
-    	  GPIO_ResetBits(GPIOD, GPIO_Pin_12);
-    	  if(czestotliwosc<=327) GPIO_SetBits(GPIOD, GPIO_Pin_15);
-    	  if(czestotliwosc>=329) GPIO_SetBits(GPIOD, GPIO_Pin_13);
-    	  reset_lines();
-    	  //reset_bemol();
-    	  //reset_krzyzyk();
-    	  //PCD8544_Refresh();
-      }
-      /*
-      if (czestotliwosc > 324 && czestotliwosc < 327){
-    	  reset_krzyzyk();
-    	  bemol();
-    	  PCD8544_Refresh();
-      }
-      else if (czestotliwosc > 329 && czestotliwosc < 332){
-    	  reset_bemol();
-    	  krzyzyk();
-    	  PCD8544_Refresh();
-      }
-*/
-      //PCD8544_Refresh();
+
 
       switch((int)czestotliwosc)
           	{
-          		case 328:	// E
+          		case 320 ... 340:	// E
           		{
-          			//PCD8544_Puts("E",PCD8544_Pixel_Set, PCD8544_FontSize_5x7);
-          			//PCD8544_DrawLine(5,12,5,24,PCD8544_Pixel_Set);
-          			//E();
+          			E();
+          			if(czestotliwosc == 328) //zakres 3 hz
+          			      {
+          			    	  GPIO_ResetBits(GPIOD, GPIO_Pin_13);
+          			    	  GPIO_ResetBits(GPIOD, GPIO_Pin_15);
+          			    	  GPIO_SetBits(GPIOD, GPIO_Pin_12);
+          			    	  reset_bemol();
+
+          			      }
+          			      else
+          			      {
+          			    	  GPIO_ResetBits(GPIOD, GPIO_Pin_13);
+          			    	  GPIO_ResetBits(GPIOD, GPIO_Pin_15);
+          			    	  GPIO_ResetBits(GPIOD, GPIO_Pin_12);
+          			    	  if(czestotliwosc<=327) bemol();//GPIO_SetBits(GPIOD, GPIO_Pin_15);
+          			    	  if(czestotliwosc>=329) GPIO_SetBits(GPIOD, GPIO_Pin_13);
+          			      }
+          			PCD8544_Refresh();
           			break;
           		}
           		case 2: // D
@@ -247,14 +230,18 @@ void reset_bemol()
 void reset_krzyzyk()
 {
 	//ustawienie krzyzyka
-	PCD8544_DrawLine(60,14,66,14,PCD8544_Pixel_Clear); //poziom dol
-	PCD8544_DrawLine(60,20,66,20,PCD8544_Pixel_Clear); //poziom gora
+	PCD8544_DrawLine(58,14,68,14,PCD8544_Pixel_Clear); //poziom dol
+	PCD8544_DrawLine(58,20,68,20,PCD8544_Pixel_Clear); //poziom gora
+	PCD8544_DrawLine(66,12,66,22,PCD8544_Pixel_Clear); //pion prawa
+	PCD8544_DrawLine(60,12,60,22,PCD8544_Pixel_Clear); //pion lewa
 }
 void krzyzyk() //krzyzyk - podwyzszony
 {
 	//ustawienie krzyzyka
 	PCD8544_DrawLine(60,14,66,14,PCD8544_Pixel_Set); //poziom dol
 	PCD8544_DrawLine(60,20,66,20,PCD8544_Pixel_Set); //poziom gora
+	PCD8544_DrawLine(66,12,66,22,PCD8544_Pixel_Set); //pion prawa
+	PCD8544_DrawLine(60,12,60,22,PCD8544_Pixel_Set); //pion lewa
 }
 void C()
 {
