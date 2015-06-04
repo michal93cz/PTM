@@ -46,6 +46,7 @@ void D();
 void F();
 void G();
 void H();
+void A();
 void reset_lines();
 void bemol();
 void krzyzyk();
@@ -79,7 +80,6 @@ int main(void)
   I2S_Configure();
 
   led_init();
-
   // Initialize PDM filter
   Filter.Fs = OUT_FREQ;
   Filter.HP_HZ = 10;
@@ -203,7 +203,7 @@ int main(void)
           			break;
           		}
           		// pokazuje przy 196 Hz, ze jest za niski dzwiek
-          		case 186 ... 206: // G
+          		case 194 ... 198: // G
           		{
           			reset_lines();
           			G();
@@ -225,25 +225,74 @@ int main(void)
           			reset_krzyzyk();
           			break;
           		}
-          		case 4:	// F
+          		case 140 ... 151:	// D
           		{
+          			reset_lines();
+          			D();
+          			if(czestotliwosc == 147)
+          			{
+          				//GPIO_ResetBits(GPIOD, GPIO_Pin_13);
+         				//GPIO_ResetBits(GPIOD, GPIO_Pin_15)
+         				GPIO_SetBits(GPIOD, GPIO_Pin_12);
+        			}
+        			else {
+        				//GPIO_ResetBits(GPIOD, GPIO_Pin_13);
+       				    //GPIO_ResetBits(GPIOD, GPIO_Pin_15);
+          				GPIO_ResetBits(GPIOD, GPIO_PIN_12);
+						if(czestotliwosc <= 146) bemol();//GPIO_SetBits(GPIOD, GPIO_Pin_15);
+						if(czestotliwosc >= 148) krzyzyk();//GPIO_SetBits(GPIOD, GPIO_Pin_13);
+        			}
+          			PCD8544_Refresh();
+          			reset_bemol();
+         			reset_krzyzyk();
           			break;
           		}
-          		case 5: // G
+          		case 100 ... 120: // A
           		{
+          			reset_lines();
+          			A();
+          			if(czestotliwosc == 110)
+          			{
+          				//GPIO_ResetBits(GPIOD, GPIO_Pin_13);
+         				//GPIO_ResetBits(GPIOD, GPIO_Pin_15)
+         				GPIO_SetBits(GPIOD, GPIO_Pin_12);
+        			}
+        			else {
+        				//GPIO_ResetBits(GPIOD, GPIO_Pin_13);
+       				    //GPIO_ResetBits(GPIOD, GPIO_Pin_15);
+          				GPIO_ResetBits(GPIOD, GPIO_PIN_12);
+						if(czestotliwosc <= 109) bemol();//GPIO_SetBits(GPIOD, GPIO_Pin_15);
+						if(czestotliwosc >= 111) krzyzyk();//GPIO_SetBits(GPIOD, GPIO_Pin_13);
+        			}
+          			PCD8544_Refresh();
+          			reset_bemol();
+         			reset_krzyzyk();
           			break;
           		}
-          		case 6: // H
+          		case 79 ... 86: // E2 -- zamiast pokazywac E odczytuje dzwiek D (mo¿e wpadaæ w oscylacje)
+          		// lub dokladnosc mikrofonu przy niskich czestotliwosciach spada
+          		// zmniejszenie badanej czestotliwosci dla D nie przynioslo poprawy
           		{
+          			reset_lines();
+          			E();
+          			if(czestotliwosc == 82)
+          			{
+          				//GPIO_ResetBits(GPIOD, GPIO_Pin_13);
+         				//GPIO_ResetBits(GPIOD, GPIO_Pin_15)
+         				GPIO_SetBits(GPIOD, GPIO_Pin_12);
+        			}
+        			else {
+        				//GPIO_ResetBits(GPIOD, GPIO_Pin_13);
+       				    //GPIO_ResetBits(GPIOD, GPIO_Pin_15);
+          				GPIO_ResetBits(GPIOD, GPIO_PIN_12);
+						if(czestotliwosc <= 81) bemol();//GPIO_SetBits(GPIOD, GPIO_Pin_15);
+						if(czestotliwosc >= 83) krzyzyk();//GPIO_SetBits(GPIOD, GPIO_Pin_13);
+        			}
+          			PCD8544_Refresh();
+          			reset_bemol();
+         			reset_krzyzyk();
           			break;
           		}
-          		default:
-          		{
-          			//PCD8544_Puts("brak sygnalu", PCD8544_Pixel_Set, PCD8544_FontSize_5x7);
-          			zamek = 1;
-          			break;
-          		}
-
           	}
 
       // Wait some time
@@ -308,6 +357,13 @@ void E()
 	PCD8544_DrawLine(31,12,31,24,PCD8544_Pixel_Set); //lewa cala pion
 	PCD8544_DrawLine(32,18,40,18,PCD8544_Pixel_Set); //srodek poziom
 	PCD8544_DrawLine(31,25,41,25,PCD8544_Pixel_Set); //dol poziom
+	PCD8544_DrawLine(31,11,41,11,PCD8544_Pixel_Set); //gora poziom
+}
+void A()
+{
+	PCD8544_DrawLine(31,12,31,24,PCD8544_Pixel_Set); //lewa cala pion
+	PCD8544_DrawLine(41,12,41,24,PCD8544_Pixel_Set); //prawa cala pion
+	PCD8544_DrawLine(32,18,40,18,PCD8544_Pixel_Set); //srodek poziom
 	PCD8544_DrawLine(31,11,41,11,PCD8544_Pixel_Set); //gora poziom
 }
 void F()
