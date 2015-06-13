@@ -18,7 +18,7 @@
 </editorArea>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/Users/mICHU/Documents/GitHub/PTM/stroik/DevKit407_AudioSpectrumAnalyzer/main.c" title="main.c" tooltip="C:/Users/mICHU/Documents/GitHub/PTM/stroik/DevKit407_AudioSpectrumAnalyzer/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/DevKit407_AudioSpectrumAnalyzer/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4800" selectionTopPixel="2500"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4823" selectionTopPixel="2323"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.h" partName="main.h" path="C:/Users/Bartosz/Documents/GitHub/PTM/stroik/DevKit407_AudioSpectrumAnalyzer/main.h" title="main.h" tooltip="C:/Users/Bartosz/Documents/GitHub/PTM/stroik/DevKit407_AudioSpectrumAnalyzer/main.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/DevKit407_AudioSpectrumAnalyzer/main.h"/>
@@ -421,11 +421,17 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32f4_spi.c" tooltip="DevKit407_AudioSpectrumAnalyzer/cmsis_lib/source/tm_stm32f4_spi.c">
+<persistable path="/DevKit407_AudioSpectrumAnalyzer/cmsis_lib/source/tm_stm32f4_spi.c"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32f4_pcd8544.c" tooltip="DevKit407_AudioSpectrumAnalyzer/cmsis_lib/source/tm_stm32f4_pcd8544.c">
 <persistable path="/DevKit407_AudioSpectrumAnalyzer/cmsis_lib/source/tm_stm32f4_pcd8544.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32f4_spi.c" tooltip="DevKit407_AudioSpectrumAnalyzer/cmsis_lib/source/tm_stm32f4_spi.c">
-<persistable path="/DevKit407_AudioSpectrumAnalyzer/cmsis_lib/source/tm_stm32f4_spi.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_it.c" tooltip="DevKit407_AudioSpectrumAnalyzer/stm32f4xx_it.c">
+<persistable path="/DevKit407_AudioSpectrumAnalyzer/stm32f4xx_it.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="arm_math.h" tooltip="DevKit407_AudioSpectrumAnalyzer/cmsis/arm_math.h">
+<persistable path="/DevKit407_AudioSpectrumAnalyzer/cmsis/arm_math.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_spi.c" tooltip="DevKit407_AudioSpectrumAnalyzer/cmsis_lib/source/stm32f4xx_spi.c">
 <persistable path="/DevKit407_AudioSpectrumAnalyzer/cmsis_lib/source/stm32f4xx_spi.c"/>
@@ -435,9 +441,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="DevKit407_AudioSpectrumAnalyzer/main.c">
 <persistable path="/DevKit407_AudioSpectrumAnalyzer/main.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_it.c" tooltip="DevKit407_AudioSpectrumAnalyzer/stm32f4xx_it.c">
-<persistable path="/DevKit407_AudioSpectrumAnalyzer/stm32f4xx_it.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_spi.h" tooltip="DevKit407_AudioSpectrumAnalyzer/cmsis_lib/include/stm32f4xx_spi.h">
 <persistable path="/DevKit407_AudioSpectrumAnalyzer/cmsis_lib/include/stm32f4xx_spi.h"/>
@@ -457,11 +460,8 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="arm_common_tables.c" tooltip="Stroik/DSP/arm_common_tables.c">
 <persistable path="/Stroik/DSP/arm_common_tables.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="arm_math.h" tooltip="Stroik/cmsis/arm_math.h">
-<persistable path="/Stroik/cmsis/arm_math.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.h" tooltip="DevKit407_AudioSpectrumAnalyzer/main.h">
-<persistable path="/DevKit407_AudioSpectrumAnalyzer/main.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32f4_spi.c" tooltip="DevKit407_AudioSpectrumAnalyzer/cmsis_lib/source/tm_stm32f4_spi.c">
+<persistable path="/DevKit407_AudioSpectrumAnalyzer/cmsis_lib/source/tm_stm32f4_spi.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4_discovery_lcd.c" tooltip="DevKit407_AudioSpectrumAnalyzer/DevKit407/stm32f4_discovery_lcd.c">
 <persistable path="/DevKit407_AudioSpectrumAnalyzer/DevKit407/stm32f4_discovery_lcd.c"/>
