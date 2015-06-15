@@ -154,25 +154,18 @@ int main(void)
           			E();
           			if(czestotliwosc == 330) //zakres 3 hz
           			      {
-          			    	  GPIO_ResetBits(GPIOD, GPIO_Pin_13);
-          			    	  GPIO_ResetBits(GPIOD, GPIO_Pin_15);
           			    	  GPIO_SetBits(GPIOD, GPIO_Pin_12);
-          			    	  //reset_bemol();
           			      }
           			      else
           			      {
-          			    	  GPIO_ResetBits(GPIOD, GPIO_Pin_13);
-          			    	  GPIO_ResetBits(GPIOD, GPIO_Pin_15);
           			    	  GPIO_ResetBits(GPIOD, GPIO_Pin_12);
           			    	  if(czestotliwosc<330)
           			    	  {
           			    		  bemol();
-          			    		  GPIO_SetBits(GPIOD, GPIO_Pin_15);
           			    	  }
           			    	  if(czestotliwosc>330)
           			    	  {
           			    		  krzyzyk();
-          			    		  GPIO_SetBits(GPIOD, GPIO_Pin_13);
           			    	  }
           			      }
           			PCD8544_Refresh();
@@ -186,39 +179,31 @@ int main(void)
           			H();
           			if(czestotliwosc == 247)
           			{
-          				//GPIO_ResetBits(GPIOD, GPIO_Pin_13);
-          				//GPIO_ResetBits(GPIOD, GPIO_Pin_15)
           				GPIO_SetBits(GPIOD, GPIO_Pin_12);
           			}
           			else {
-          				//GPIO_ResetBits(GPIOD, GPIO_Pin_13);
-          				//GPIO_ResetBits(GPIOD, GPIO_Pin_15);
           				GPIO_ResetBits(GPIOD, GPIO_PIN_12);
-						if(czestotliwosc < 247) bemol();//GPIO_SetBits(GPIOD, GPIO_Pin_15);
-						if(czestotliwosc > 247) krzyzyk();//GPIO_SetBits(GPIOD, GPIO_Pin_13);
+						if(czestotliwosc < 247) bemol();
+						if(czestotliwosc > 247) krzyzyk();
 					}
           			PCD8544_Refresh();
           			reset_bemol();
           			reset_krzyzyk();
           			break;
           		}
-          		// pokazuje przy 196 Hz, ze jest za niski dzwiek
+
           		case 186 ... 206: // G
           		{
           			reset_lines();
           			G();
           			if(czestotliwosc == 196)
           			{
-          				//GPIO_ResetBits(GPIOD, GPIO_Pin_13);
-          				//GPIO_ResetBits(GPIOD, GPIO_Pin_15)
           				GPIO_SetBits(GPIOD, GPIO_Pin_12);
           			}
           			else {
-          				//GPIO_ResetBits(GPIOD, GPIO_Pin_13);
-          				//GPIO_ResetBits(GPIOD, GPIO_Pin_15);
           				GPIO_ResetBits(GPIOD, GPIO_PIN_12);
-						if(czestotliwosc < 196) bemol();//GPIO_SetBits(GPIOD, GPIO_Pin_15);
-						if(czestotliwosc > 196) krzyzyk();//GPIO_SetBits(GPIOD, GPIO_Pin_13);
+						if(czestotliwosc < 196) bemol();
+						if(czestotliwosc > 196) krzyzyk();
 					}
           			PCD8544_Refresh();
           			reset_bemol();
@@ -231,16 +216,12 @@ int main(void)
           			D();
           			if(czestotliwosc == 147)
           			{
-          				//GPIO_ResetBits(GPIOD, GPIO_Pin_13);
-         				//GPIO_ResetBits(GPIOD, GPIO_Pin_15)
          				GPIO_SetBits(GPIOD, GPIO_Pin_12);
         			}
         			else {
-        				//GPIO_ResetBits(GPIOD, GPIO_Pin_13);
-       				    //GPIO_ResetBits(GPIOD, GPIO_Pin_15);
           				GPIO_ResetBits(GPIOD, GPIO_PIN_12);
-						if(czestotliwosc < 147) bemol();//GPIO_SetBits(GPIOD, GPIO_Pin_15);
-						if(czestotliwosc > 147) krzyzyk();//GPIO_SetBits(GPIOD, GPIO_Pin_13);
+						if(czestotliwosc < 147) bemol();
+						if(czestotliwosc > 147) krzyzyk();
         			}
           			PCD8544_Refresh();
           			reset_bemol();
@@ -253,57 +234,36 @@ int main(void)
           			A();
           			if(czestotliwosc == 110)
           			{
-          				//GPIO_ResetBits(GPIOD, GPIO_Pin_13);
-         				//GPIO_ResetBits(GPIOD, GPIO_Pin_15)
          				GPIO_SetBits(GPIOD, GPIO_Pin_12);
         			}
         			else {
-        				//GPIO_ResetBits(GPIOD, GPIO_Pin_13);
-       				    //GPIO_ResetBits(GPIOD, GPIO_Pin_15);
           				GPIO_ResetBits(GPIOD, GPIO_PIN_12);
-						if(czestotliwosc < 110) bemol();//GPIO_SetBits(GPIOD, GPIO_Pin_15);
-						if(czestotliwosc > 110) krzyzyk();//GPIO_SetBits(GPIOD, GPIO_Pin_13);
+						if(czestotliwosc < 110) bemol();
+						if(czestotliwosc > 110) krzyzyk();
         			}
           			PCD8544_Refresh();
           			reset_bemol();
          			reset_krzyzyk();
           			break;
           		}
-          		case 72 ... 92: // E2 -- zamiast pokazywac E odczytuje dzwiek D (mo¿e wpadaæ w oscylacje)
-          		// lub dokladnosc mikrofonu przy niskich czestotliwosciach spada
-          		// zmniejszenie badanej czestotliwosci dla D nie przynioslo poprawy
+          		case 72 ... 92:
           		{
           			reset_lines();
           			E();
           			if(czestotliwosc == 82)
           			{
-          				//GPIO_ResetBits(GPIOD, GPIO_Pin_13);
-         				//GPIO_ResetBits(GPIOD, GPIO_Pin_15)
          				GPIO_SetBits(GPIOD, GPIO_Pin_12);
         			}
         			else {
-        				//GPIO_ResetBits(GPIOD, GPIO_Pin_13);
-       				    //GPIO_ResetBits(GPIOD, GPIO_Pin_15);
           				GPIO_ResetBits(GPIOD, GPIO_PIN_12);
-						if(czestotliwosc < 82) bemol();//GPIO_SetBits(GPIOD, GPIO_Pin_15);
-						if(czestotliwosc > 82) krzyzyk();//GPIO_SetBits(GPIOD, GPIO_Pin_13);
+						if(czestotliwosc < 82) bemol();
+						if(czestotliwosc > 82) krzyzyk();
         			}
           			PCD8544_Refresh();
           			reset_bemol();
          			reset_krzyzyk();
           			break;
           		}
-          		/*default:
-          		          		{
-          		          			GPIO_ResetBits(GPIOD, GPIO_Pin_13);
-          		          			GPIO_ResetBits(GPIOD, GPIO_Pin_15);
-          		          			GPIO_ResetBits(GPIOD, GPIO_PIN_12);
-          		          			reset_bemol();
-          		          			reset_krzyzyk();
-          		          			reset_lines();
-          		          			PCD8544_Refresh();
-          		          			break;
-          		          		}*/
           	}
 
     }
